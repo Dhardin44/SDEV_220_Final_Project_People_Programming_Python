@@ -14,27 +14,34 @@ A Python Workshop Management & Registration System for an arts & crafts retail h
 
  **Project Directory Structure**
 
-
-workshop_registration/
-├── .gitignore                   # Local files (like .env) that shouldn't go to GitHub
-├── README.md                    # This file
-├── pytest.ini                   # Test file    
-├── conftest.py                  # Test file
-├── src/
-│   └── workshop_app/
-│       ├── __init__.py
-│       ├── models/
-│       │   ├── __init__.py
-│       │   ├── workshop.py      # Craft type, skill level, description
-│       │   ├── instructor.py    # Instructor details and expertise
-│       │   ├── session.py       # Specific scheduled class instance (date, time, capacity)
-│       │   ├── user.py          # Customer info
-│       │   └── registration.py  # Links User to Session with status
-│       └── services/
-│           ├── __init__.py
-│           └── registration_service.py # Main booking and capacity logic
-└── tests/
+SDEV_220_Final_Project_People_Programming_Python/
+├── .gitignore
+├── .test_run_count
+├── conftest.py
+├── pytest.ini
+├── README.md
+├── requirements.txt
+├── src
+│   └── workshop_app
+│       ├── __init__.py
+│       ├── main.py                     # App entry
+│       ├── models                      # Main entities
+│       │   ├── __init__.py
+│       │   ├── registration.py         # Bookings and payment states
+│       │   ├── session.py              # Time, capacity, availability
+│       │   └── workshop.py             # Business logic/validation
+│       ├── services
+│       │   ├── __init__.py
+│       │   ├── booking_service.py      # Filtering, creating, managing 
+│       │   ├── instructor_service.py   # Instructor assignments/schedules
+│       │   └── workshop_service.py     # Filtering, creating, managing
+│       └── ui                          # TKinter GUI
+│           ├── __init__.py
+│           ├── browse_tab.py           # Tkinter views for US-01/02
+│           ├── instructor_tab.py       # Tkinter views for US-05
+│           ├── main_window.py          # Root application window
+│           └── registration_tab.py     # Tkinter forms for US-03/04
+└── tests                               # Automated Pytest
     ├── __init__.py
-    ├── conftest.py               # Automated test run counter for QA
-    ├── test_capacity.py          # Capacity and overbooking constraint tests
-    └── test_registration.py      # Registration flow tests
+    ├── test_capacity.py
+    └── test_registration.py
