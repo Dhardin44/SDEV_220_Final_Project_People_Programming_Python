@@ -1,8 +1,40 @@
-# Workshop Registration System
+---  SDEV 220 Final Project: Arts & Crafts Workshop Registration System ---
 
-A Python Workshop Management & Registration System for an arts & crafts retail hub. 
+**Project Definition**
 
----  Project Definition ---
+The Arts & Crafts Workshop Registration System is a modular, desktop, GUI based management application designed for established craft and hobby retailers (such as Michaels or Hobby Lobby). 
+
+**Scope & Boundaries**
+
+*In Scope:*
+
+  **Workshop & Session Management:** Creating and managing workshop templates, scheduling specific calendar sessions, setting capacity limits, and tracking available spaces.
+
+  **Customer Registration & Simulated Payments:** Allowing customers to browse active upcoming workshops, view required materials/supply lists, register, and process simulated payments with automated confirmations.
+
+  **Instructor & Employee Rosters:** Providing instructors and coordinators with access to scheduled workshops and registered participant rosters.
+
+*Out of Scope:*
+
+  **Retail Inventory:** General store inventory, shelf stock tracking, inventory databases and retail e-commerce shopping carts are unnecessary.
+
+**Architecture**
+
+The application follows a basic separation of concerns, separating the main domain logic from the user interface to keep things clean:
+
+* 'src/workshop_app/models/' : Main domain entities ('Workshop', 'Session', 'Registration').
+
+* 'src/workshop_app/services/': Business logic, validation rules, and capacity checks.
+
+* 'src/workshop_app/ui/': Decoupled Tkinter graphical user interface.
+
+* 'tests/': Automated test suite using 'pytest'.
+
+
+QUICK ANSWERS:
+
+**A Python Workshop Management & Registration System for an Arts & Crafts Store**
+
 
 **What is it?** A modular system to handle craft workshops, scheduled sessions, instructor assignments, and customer registrations.
 
